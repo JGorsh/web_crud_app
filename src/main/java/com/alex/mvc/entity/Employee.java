@@ -1,4 +1,4 @@
-package com.alex.crud.mvc.entity;
+package com.alex.mvc.entity;
 
 import javax.persistence.*;
 
