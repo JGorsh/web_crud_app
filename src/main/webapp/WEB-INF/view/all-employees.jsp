@@ -2,22 +2,22 @@
 <!DOCTYPE html>
 
 
-
 <html>
 
-    <head>
-        <title>ALL Employees</title>
-    </head>
+<head>
+    <title>ALL Employees</title>
+</head>
 
 
-    <body>
+<body>
+<div align="center">
 
-        <h2>
-            ALL Employees
-        </h2>
+    <h2>
+        ALL Employees
+    </h2>
     <br>
 
-    <table>
+    <table border="1" cellpadding="5">
         <tr>
             <th>Name</th>
             <th>Surname</th>
@@ -26,13 +26,13 @@
             <th>Operations</th>
         </tr>
 
-        <c:forEach var = "emp" items="${allEmps}">
+        <c:forEach var="emp" items="${allEmps}">
 
-            <c:url var="updateButton" value = "/updateInfo">
+            <c:url var="updateButton" value="/updateInfo">
                 <c:param name="empId" value="${emp.id}"/>
             </c:url>
 
-            <c:url var="deleteButton" value = "/deleteEmployee">
+            <c:url var="deleteButton" value="/deleteEmployee">
                 <c:param name="empId" value="${emp.id}"/>
             </c:url>
 
@@ -48,16 +48,17 @@
                 </td>
             </tr>
 
-            </c:forEach>
+        </c:forEach>
     </table>
 
-        <br>
+    <br>
 
     <input type="button" value="Add"
-    onclick="window.location.href = 'addNewEmployee'"/>
+           onclick="window.location.href = 'addNewEmployee'"/>
 
+</div>
 
-    </body>
+</body>
 
 
 </html>

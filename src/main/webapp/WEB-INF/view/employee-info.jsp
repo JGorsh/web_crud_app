@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 
 
-
 <html>
 
 <head>
@@ -12,32 +11,34 @@
 
 <body>
 
-<h2>
-    Employee Info
-</h2>
+<div align="center">
 
-<form:form action="saveEmployee" modelAttribute="employee">
+    <h2>
+        Employee Info
+    </h2>
 
-    <form:hidden path="id"/>
+    <form:form action="saveEmployee" modelAttribute="employee">
 
-    Name <form:input path="name"/>
-    <form:errors path="name"/>
-    <br><br>
-    Surname <form:input path="surname"/>
-    <form:errors path="surname"/>
-    <br><br>
-    Department <form:input path="department"/>
-    <form:errors path="department"/>
-    <br><br>
-    Salary <form:input path="salary"/>
-    <form:errors path="salary"/>
-    <br><br>
+        <form:hidden path="id"/>
 
-    <input type="submit" value="Ok">
+        Name <form:input path="name"/>
+        <form:errors path="name"/>
+        <br><br>
+        Surname <form:input path="surname"/>
+        <form:errors path="surname"/>
+        <br><br>
+        Department <form:input path="department"/>
+        <form:errors path="department"/>
+        <br><br>
+        Salary <form:input path="salary"/>
+        <form:errors path="salary"/>
+        <br><br>
 
-</form:form>
+        <input type="submit" value="Ok">
 
+    </form:form>
 
+</div>
 
 </body>
 

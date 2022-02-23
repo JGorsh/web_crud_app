@@ -1,1 +1,1 @@
-"# web_crud_app"  
+Simple CRUD example using Maven, Spring MVC, Hibernate, MySQL
