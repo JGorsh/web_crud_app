@@ -1,6 +1,10 @@
 package com.alex.mvc.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "employees")
@@ -12,15 +16,22 @@ public class Employee {
     private int id;
 
     @Column(name = "name")
+    @Size(min =2, message = "name must be min 2 symbols")
+    @NotBlank(message = "empty field")
     private String name;
 
     @Column(name = "surname")
+    @Size(min =2, message = "surname must be min 2 symbols")
+    @NotBlank(message = "empty field")
     private String surname;
 
     @Column(name = "department")
+    @NotBlank(message = "empty field")
     private String department;
 
     @Column(name = "salary")
+    @Min(value = 100, message = "value must be >= 100")
+    @Max(value = 15000, message = "value must be <= 15000")
     private int salary;
 
     public Employee() {
