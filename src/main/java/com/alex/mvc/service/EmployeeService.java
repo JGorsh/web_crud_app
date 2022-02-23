@@ -1,6 +1,5 @@
 package com.alex.mvc.service;
 
-import com.alex.mvc.dao.EmployeeDAO;
 import com.alex.mvc.entity.Employee;
 
 import java.util.List;
